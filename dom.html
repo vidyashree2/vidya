@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunkers Adda</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+<body>
+    <div>
+    
+    <label for="tea">tea</label>
+        <input type="radio" name="drink" id="tea">tea 
+        <label for="coffee">coffee</label>
+        <input type="radio" name="drink" id="coffee">coffee
+        <label for="milk">milk</label>
+        <input type="radio" name="drink" id="milk">milk
+        <label for="badam milk">badam milk</label>
+        <input type="radio" name="drink" id="badam milk">badam milk
+        <label for="boost">boost</label>
+        <input type="radio" name="drink" id="boost"> boost
+<button type="button" onclick="add()">add</button>
+<button type="button" onclick="total()">total</button>
+</div>
+<div>
+
+<p>tea Count :<span id="tea count">0</span></p>
+<p>coffee Count :<span id="coffee count">0</span></p>
+<p>milk Count :<span id="milk count">0</span></p>
+<p>badam milk Count :<span id="badam milk count">0</span></p>
+<p>boost Count :<span id="boost count">0</span></p>
+<p id="bill"></p>
+</div>
+<script>
+    let teacount=0;
+    let coffeecount=0;
+    let milkcount=0;
+    let badammilkcount=0;
+    let boostcount=0;
+
+    let tearate = 10;
+    let coffeerate = 12;
+    let milkrate = 15;
+    let badammilkrate = 20;
+    let boostrate = 15;
+
+    function add() {
+        const selecteddrink = document.querySelector('input[name = "drink"]:checked');
+        if (selecteddrink){
+            const drinktype = selecteddrink.value;
+            if (drinktype === 'tea'){
+                teacount++;
+                document.getElementById('teacount').textContent = teacount;
+            }
+            if (drinktype ==='coffee'){
+                coffeecount++;
+                document.getElementById('coffeecount').textContent = coffeecount;
+            }
+            if (drinktype === 'milk'){
+                milkcount++;
+                document.getElementById('milkcount').textContent = milkcount;
+            }
+            if (drinktype === 'badam milk'){
+                badammilkcount++;
+                document.getElementById('badam milk count').textContent = badammilkcount;
+            }
+            if (drinktype === 'boost'){
+                boostcount++;
+                document.getElementById('boost count').textContent = boostcount;
+            }
+        }
+    }
+
+    function total(){
+        let total = (teacount*tearate)+(coffeecount*coffeerate)+(milkcount*milkrate)+(badammilkcount*badammilkrate)+(boostcount*boostrate)
+        document.getElementById('bill').textContent= "total =" + "₹" +total;
+    }
+
+</script>
+</body>
+</html>

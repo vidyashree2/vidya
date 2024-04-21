@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vidya.css">
+</head>
+<body>
+    <center>
+    <div class = "container">
+    <h2> voter validation</h2>
+   <label for = "age" >Enter your age:</label>
+   <input type = "number" id = "age" min ="0">
+   <input type="text" name="" id="name" placeholder="Enter your name">
+    
+    <input type="text" id="country" placeholder="Enter your country">
+    <button onclick="validateage()">check eligibility</button>
+    <p id = "result"></p>
+    </center>
+    </div>
+    <script>
+        function validateage() {
+            var age= document.getElementById("age").value;
+            var resultElement= document.getElementById("result");
+            var name = document.getElementById("name");
+            var country = document.getElementById("country").value;
+            
+
+            if(age >= 18) {
+
+            if(country == "India" || country == "india") {
+                resultElement.innerText = name.value  + " You are eligable👍🎉🎉" ;
+            }else{
+                resultElement.innerText = name.value + "you ar not eligable to vote in india";
+            } 
+         } else {
+                resultElement. innerText = name.value +  "  you are not eligable ";
+         } 
+                
+            }
+        
+            
+            </script>
+            </body>
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div>
+    <div id="div1">
+    <p>hii</p></div>
+    <div id="div2">
+    <p>hloo</p></div>
+    <div id="div3">
+    <p>dude</p></div>
+    </div>
+    <div>
+<button onclick="fun()">click on</button>
+<button onclick="fun()">click on</button>
+    </div>
+<style>
+    #div1{
+        margin-top: 15px;
+        margin-left: 10px;
+        height: 150px;
+        width: 150px;
+        background-color: antiquewhite;
+        border: 2px solid black;
+        border-radius: 70%;
+        display: flex;
+    }
+    #div2{
+        margin-top: 15px;
+        margin-left: 10;
+        height: 150px;
+        width: 150px;
+        background-color: rebeccapurple;
+        border: 2px solid black;
+        border-radius: 70%;
+        display: flex;
+    }
+    #div3{
+        margin-top: 15px;
+        margin-left: 10;
+        height: 150px;
+        width: 150px;
+        background-color: salmon;
+        border: 2px solid black;
+        border-radius: 70%;
+        display: flex;
+    }
+    body{
+        display: flex;
+        align-items: centre;
+        justify-content: center;
+    }
+</style>
+<script>
+    function fun() {
+        $("div").css('background-color' ,'red').fadeToggle(5000);
+        $("p").fadeToggle(10000);
+        $("#div1","#div3").css('background-color', 'blue');
+    }
+    function changeText(){
+        $("p").css({
+            'color':'green',
+            'font-size':'20px'
+        });
+        function addShadow(){
+            $("div").css('box-shadow','5px 5px5px grey');
+        }
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+body{
+    background-color: aqua;
+    text-align: center;
+    border-image-width: 0%;
+    border-image-repeat: inherit;
+
+}
+div{
+    text-decoration: dashed;
+    text-shadow: 0cqb;
+    mask-image: -moz-linear-gradient();
+}
+.div{
+    text-overflow: inherit;
+    text-rendering: optimizeSpeed;
+    border-image-repeat: inherit;
+}
+body{
+    background-image: url(img/c:\Users\LapMac\Desktop\eee);
+}
